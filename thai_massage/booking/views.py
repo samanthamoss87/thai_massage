@@ -10,7 +10,7 @@ def treatments(request):
 
 # Book Now Page
 def book_now(request):
-    return render(request, 'book_now.html')
+    return render(request, 'booking.html')
 
 # Contact Page
 def contact(request):
