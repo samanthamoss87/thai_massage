@@ -19,3 +19,7 @@ def contact(request):
 # Login Page
 def login_view(request):
     return render(request, 'login.html')
+
+# Register Page
+def register_view(request):
+    return render(request, 'register.html')
