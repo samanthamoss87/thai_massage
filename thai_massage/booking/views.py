@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Treatments
 
 # Home Page
 def home(request):
@@ -6,7 +7,8 @@ def home(request):
 
 # Treatments Page
 def treatments(request):
-    return render(request, 'treatments.html')
+    treatment_list = Treatments.objects.all()
+    return render(request, 'treatments.html', {'treatments': treatment_list})
 
 # Book Now Page
 def book_now(request):

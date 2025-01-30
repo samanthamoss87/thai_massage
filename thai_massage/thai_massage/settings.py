@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-d-4ssstud6o7krn@qiy)^p#@6s@a9xed-wb-3h8)_v5nbf3f!h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["8000-samanthamoss87-project4-ewn3f8asl7s.ws-eu117.gitpod.io"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -114,3 +114,5 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ['https://8000-samanthamoss87-project4-ewn3f8asl7s.ws-eu117.gitpod.io']

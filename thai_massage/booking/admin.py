@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Treatments
 
-# Register your models here.
+
+
+admin.site.register(Treatments)
