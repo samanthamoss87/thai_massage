@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>{% block title %}  {% endblock %}</title>
+    <title>{% block title %} {% endblock %}</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="{% static 'booking/assets/favicon.ico' %}" />
     <!-- Font Awesome icons (free version)-->
@@ -38,7 +38,14 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'treatments' %}">Treatments</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'book_now' %}">Book Now</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'dashboard' %}">Welcome, {{ user.first_name }}!</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
                     <li class="nav-item"><a class="nav-link" href="{% url 'login' %}">Login</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

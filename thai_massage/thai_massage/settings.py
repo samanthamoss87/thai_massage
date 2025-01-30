@@ -38,6 +38,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default backend
+    'booking.backends.EmailAuthBackend',   # Custom backend
+]
+
 ROOT_URLCONF = 'thai_massage.urls'
 
 TEMPLATES = [

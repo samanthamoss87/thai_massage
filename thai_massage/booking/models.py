@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 class Treatments(models.Model):
     title = models.CharField(max_length=255)
@@ -10,3 +11,11 @@ class Treatments(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    mobile = models.CharField(max_length=15)
+
+    def __str__(self):
+        return self.user.username
