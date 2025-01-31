@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
-from .forms import UserRegisterForm, UserLoginForm
+from .forms import UserRegisterForm, UserLoginForm, BookingForm
 from .models import Treatments, UserProfile
 
 # Home Page
@@ -16,7 +16,16 @@ def treatments(request):
 
 # Book Now Page
 def book_now(request):
-    return render(request, 'booking.html')
+    if request.method == "POST":
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.user = request.user
+            booking.save()
+            return redirect('dashboard')
+    else:
+        form = BookingForm()
+    return render(request, 'booking.html', {'form': form})
 
 # Contact Page
 def contact(request):

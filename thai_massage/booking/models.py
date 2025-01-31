@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Treatments(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
@@ -19,3 +20,15 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return self.user.username
+
+
+# Treatment Booking Model
+class Booking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    treatment = models.ForeignKey(Treatments, on_delete=models.CASCADE)
+    date = models.DateField()
+    time = models.TimeField()
+    notes = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.user.username} - {self.treatment.title} on {self.date} at {self.time}"

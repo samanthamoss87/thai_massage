@@ -9,26 +9,50 @@
     </div>
 </header>
 
-
-<!-- Calendar -->
-<sectioin class="page-section" id="booking">
+<section class="page-section" id="book-now">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-sm-12 cal-container">
-                <h2 class="cal-heading text-uppercase mb-5">Select Date</h2>
-                <div class="cal-con">
-                    <div class="d-flex justify-content-between align-items-center mb-3">
-                        <button id="prevMonth" class="btn btn-success">&lt;</button>
-                        <h3 id="currentMonth">January 2025</h3>
-                        <button id="nextMonth" class="btn btn-success">&gt;</button>
-                    </div>
-
-                    <div class="calendar" id="calendar">
-                        <!-- Days will be injected dynamically -->
-                    </div>
+        <div class="row flex justify-content-center align-items-center">
+            <div class="col-lg-6 col-sm-12">
+                <!-- Display form errors -->
+                {% if form.errors %}
+                <div class="alert alert-danger">
+                    <strong>Error!</strong> Please correct the following:
+                    <ul>
+                        {% for field, errors in form.errors.items %}
+                        {% for error in errors %}
+                        <li>{{ error }}</li>
+                        {% endfor %}
+                        {% endfor %}
+                    </ul>
                 </div>
+                {% endif %}
+
+                <!-- Booking Form -->
+                <form method="post" action="{% url 'book_now' %}">
+                    {% csrf_token %}
+                    <div class="form-group mb-3">
+                        <label for="id_treatment">Treatment</label>
+                        {{ form.treatment }}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="id_date">Date</label>
+                        {{ form.date }}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="id_time">Time</label>
+                        {{ form.time }}
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="id_notes">Notes</label>
+                        {{ form.notes }}
+                    </div>
+                    <button type="submit" class="btn btn-outline-success btn-md mt-3">Book Now</button>
+                </form>
             </div>
         </div>
     </div>
-</sectioin>
+</section>
+
+
+
 {% endblock %}

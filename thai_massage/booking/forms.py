@@ -1,8 +1,9 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
-from .models import UserProfile
+from django.utils import timezone
 import uuid
+from .models import UserProfile, Booking
 
 class UserRegisterForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=True)
@@ -42,3 +43,16 @@ class UserLoginForm(AuthenticationForm):
         widget=forms.EmailInput(attrs={'autofocus': True}),
         label="Email Address"
     )
+
+
+# Treatment booking Form
+class BookingForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = ['treatment', 'date', 'time', 'notes']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Set the minimum date to today
+        self.fields['date'].widget = forms.DateInput(attrs={'type': 'date', 'min': timezone.now().date()})
+        self.fields['time'].widget = forms.TimeInput(attrs={'type': 'time'})
