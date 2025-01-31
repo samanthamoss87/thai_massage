@@ -299,6 +299,7 @@ svg {
 }
 
 table {
+  font-family: "Poppins";
   caption-side: bottom;
   border-collapse: collapse;
 }

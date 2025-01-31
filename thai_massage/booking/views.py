@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
+from django.utils import timezone
 from .forms import UserRegisterForm, UserLoginForm, BookingForm
 from .models import Treatments, UserProfile, Booking
 
@@ -75,8 +76,21 @@ def login_view(request):
 @login_required
 def dashboard_view(request):
     if not request.user.is_authenticated:
-        return redirect('login')  # Redirect to login if user is not authenticated
-    return render(request, 'dashboard.html')
+        return redirect('login')
+    # Get the current date/time
+    now = timezone.now().date()
+
+    # Filter bookings for the logged-in user and future dates
+    future_bookings = Booking.objects.filter(
+        user=request.user,  # Filter by logged-in user
+        date__gte=now       # Filter future dates (greater than or equal to today)
+    ).order_by('date', 'start_time')  # Order by date and start time
+
+    # Pass the filtered bookings to the template
+    context = {
+        'future_bookings': future_bookings,
+    }
+    return render(request, 'dashboard.html', context)
 
 def logout_view(request):
     logout(request)

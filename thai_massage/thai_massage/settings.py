@@ -121,3 +121,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = ['https://8000-samanthamoss87-project4-ewn3f8asl7s.ws-eu117.gitpod.io']
+
+# Set session timeout to 2 hours (7200 seconds)
+SESSION_COOKIE_AGE = 7200
+
+# Optional: Expire the session when the user closes the browser
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
