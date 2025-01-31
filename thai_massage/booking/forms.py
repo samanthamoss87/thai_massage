@@ -2,7 +2,9 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.core.exceptions import ValidationError
 import uuid
+import datetime
 from .models import UserProfile, Booking
 
 class UserRegisterForm(UserCreationForm):
@@ -47,12 +49,44 @@ class UserLoginForm(AuthenticationForm):
 
 # Treatment booking Form
 class BookingForm(forms.ModelForm):
+    DURATION_CHOICES = [
+        (30, '30 Minutes - $55'),
+        (60, '60 Minutes - $80'),
+        (120, '120 Minutes - $110'),
+    ]
+
+    duration = forms.ChoiceField(choices=DURATION_CHOICES, widget=forms.RadioSelect)
+    
     class Meta:
         model = Booking
-        fields = ['treatment', 'date', 'time', 'notes']
+        fields = ['treatment', 'date', 'start_time', 'duration']
+        widgets = {
+            'date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
+            'start_time': forms.TimeInput(attrs={'type': 'time', 'class': 'form-control'})
+        }
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        # Set the minimum date to today
-        self.fields['date'].widget = forms.DateInput(attrs={'type': 'date', 'min': timezone.now().date()})
-        self.fields['time'].widget = forms.TimeInput(attrs={'type': 'time'})
+    def clean(self):
+        cleaned_data = super().clean()
+        date = cleaned_data.get('date')
+        start_time = cleaned_data.get('start_time')
+        duration = int(cleaned_data.get('duration', 0))
+
+        if date and start_time and duration:
+            # Calculate end time
+            start_dt = datetime.datetime.combine(date, start_time)
+            end_dt = start_dt + datetime.timedelta(minutes=duration)
+            
+            # Check business hours
+            if start_dt.time() < datetime.time(9, 0) or end_dt.time() > datetime.time(20, 0):
+                raise ValidationError("We're only open from 9 AM to 8 PM")
+            
+            # Check existing bookings
+            conflicts = Booking.objects.filter(
+                date=date,
+                start_time__lt=end_dt.time(),
+                end_time__gt=start_dt.time()
+            )
+            if conflicts.exists():
+                raise ValidationError("This time slot is already booked")
+
+        return cleaned_data

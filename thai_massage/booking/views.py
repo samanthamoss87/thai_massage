@@ -3,7 +3,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm, UserLoginForm, BookingForm
-from .models import Treatments, UserProfile
+from .models import Treatments, UserProfile, Booking
 
 # Home Page
 def home(request):
@@ -15,17 +15,22 @@ def treatments(request):
     return render(request, 'treatments.html', {'treatments': treatment_list})
 
 # Book Now Page
+@login_required
 def book_now(request):
-    if request.method == "POST":
+    if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
             booking.save()
-            return redirect('dashboard')
+            return redirect('booking_success')
     else:
         form = BookingForm()
+    
     return render(request, 'booking.html', {'form': form})
+
+def booking_success(request):
+    return render(request, 'booking_success.html')
 
 # Contact Page
 def contact(request):
@@ -39,7 +44,7 @@ def register_view(request):
             user = form.save()
             print("user created")
             # Log the user in
-            login(request, user)
+            login(request, user, backend='booking.backends.EmailAuthBackend')
             return redirect('login')
     else:
         form = UserRegisterForm()
