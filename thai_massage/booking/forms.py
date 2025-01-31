@@ -63,6 +63,7 @@ class BookingForm(forms.ModelForm):
         fields = ['treatment', 'date', 'start_time', 'duration']
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
+            'treatment': forms.Select(attrs={"class": 'form-control'})
         }
 
     def __init__(self, *args, **kwargs):
