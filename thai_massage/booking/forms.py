@@ -56,14 +56,34 @@ class BookingForm(forms.ModelForm):
     ]
 
     duration = forms.ChoiceField(choices=DURATION_CHOICES, widget=forms.RadioSelect)
-    
+    start_time = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}))
+
     class Meta:
         model = Booking
         fields = ['treatment', 'date', 'start_time', 'duration']
         widgets = {
             'date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
-            'start_time': forms.TimeInput(attrs={'type': 'time', 'class': 'form-control'})
         }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        # Generate time slots from 9 AM to 10 PM in 30-minute intervals
+        self.fields['start_time'].choices = self.generate_time_slots()
+
+    def generate_time_slots(self):
+        time_slots = []
+        start_time = datetime.time(9, 0)  # 9:00 AM
+        end_time = datetime.time(22, 0)   # 10:00 PM
+        delta = datetime.timedelta(minutes=30)  # 30-minute intervals
+
+        current_time = datetime.datetime.combine(datetime.date.today(), start_time)
+        end_datetime = datetime.datetime.combine(datetime.date.today(), end_time)
+
+        while current_time <= end_datetime:
+            time_slots.append((current_time.time().strftime('%H:%M'), current_time.strftime('%I:%M %p')))
+            current_time += delta
+
+        return time_slots
 
     def clean(self):
         cleaned_data = super().clean()
@@ -72,13 +92,12 @@ class BookingForm(forms.ModelForm):
         duration = int(cleaned_data.get('duration', 0))
 
         if date and start_time and duration:
+            # Convert start_time string to time object
+            start_time = datetime.datetime.strptime(start_time, '%H:%M').time()
+
             # Calculate end time
             start_dt = datetime.datetime.combine(date, start_time)
             end_dt = start_dt + datetime.timedelta(minutes=duration)
-            
-            # Check business hours
-            if start_dt.time() < datetime.time(9, 0) or end_dt.time() > datetime.time(20, 0):
-                raise ValidationError("We're only open from 9 AM to 8 PM")
             
             # Check existing bookings
             conflicts = Booking.objects.filter(

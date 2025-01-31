@@ -22,6 +22,7 @@ def book_now(request):
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
+            booking.duration = int(form.cleaned_data['duration'])  # Save the selected duration
             booking.save()
             return redirect('booking_success')
     else:

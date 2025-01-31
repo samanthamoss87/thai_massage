@@ -29,24 +29,15 @@ class Booking(models.Model):
     date = models.DateField()
     start_time = models.TimeField()
     end_time = models.TimeField()
+    duration = models.IntegerField()  # Store the selected duration (30, 60, or 120)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
         # Auto-calculate end time based on duration
         from datetime import datetime, timedelta
         start = datetime.combine(self.date, self.start_time)
-        duration = self.get_duration_minutes()
-        self.end_time = (start + timedelta(minutes=duration)).time()
+        self.end_time = (start + timedelta(minutes=self.duration)).time()
         super().save(*args, **kwargs)
 
-    def get_duration_minutes(self):
-        if self.treatment.half_hour:
-            return 30
-        elif self.treatment.one_hour:
-            return 60
-        elif self.treatment.two_hour:
-            return 120
-        return 0
-
     def __str__(self):
-        return f"{self.user.username} - {self.treatment.title} on {self.date} at {self.start_time}"
+        return f"{self.user.username} - {self.treatment.title} on {self.date} at {self.start_time} for {self.duration} minutes"
