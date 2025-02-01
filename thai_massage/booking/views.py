@@ -16,7 +16,7 @@ def treatments(request):
     return render(request, 'treatments.html', {'treatments': treatment_list})
 
 # Book Now Page
-@login_required
+@login_required(login_url='/login/')
 def book_now(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
@@ -106,3 +106,6 @@ def dashboard_view(request):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+def custom_404(request, exception=None):
+    return render(request, '404.html', status=404)
