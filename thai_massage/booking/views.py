@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
@@ -33,6 +33,19 @@ def book_now(request):
 
 def booking_success(request):
     return render(request, 'booking_success.html')
+
+@login_required
+def cancel_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id)
+
+    if booking.user == request.user:
+        booking.delete()
+        from django.contrib import messages
+        messages.success(request, 'Your booking has been canceled successfully.')
+    else:
+        messages.error(request, 'You do not have permission to cancel this booking.')
+    return redirect('dashboard')
+
 
 # Contact Page
 def contact(request):
@@ -77,7 +90,6 @@ def login_view(request):
 def dashboard_view(request):
     if not request.user.is_authenticated:
         return redirect('login')
-    # Get the current date/time
     now = timezone.now().date()
 
     # Filter bookings for the logged-in user and future dates
@@ -86,7 +98,6 @@ def dashboard_view(request):
         date__gte=now       # Filter future dates (greater than or equal to today)
     ).order_by('date', 'start_time')  # Order by date and start time
 
-    # Pass the filtered bookings to the template
     context = {
         'future_bookings': future_bookings,
     }
