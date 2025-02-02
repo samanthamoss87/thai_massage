@@ -204,3 +204,5 @@
 2025-02-02 18:56:25.874 [info] > git rev-parse refs/remotes/origin/main [2ms]
 2025-02-02 18:56:25.894 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [4ms]
 2025-02-02 18:56:26.061 [info] > git status -z -uall [179ms] (cancelled)
+2025-02-02 18:59:44.575 [warning] [Model][getRepositoryExact] Failed to get repository realpath for: "/workspace/project-4/". Error:Error: ENOENT: no such file or directory, realpath '/workspace/project-4/'
+2025-02-02 18:59:47.538 [warning] [Model][getRepositoryExact] Failed to get repository realpath for: "/workspace/project-4/". Error:Error: ENOENT: no such file or directory, realpath '/workspace/project-4/'

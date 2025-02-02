@@ -28,3 +28,8 @@
     at t.unary (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:24339)
     at MetricsServiceClient.reportError (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/idemetrics_pb_service.js:153:21)
     at CP.m (file:///ide/out/server-main.js:178:7306)
+2025-02-02 19:11:26.582 [info] [192.168.85.138][dfe10ea5][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2025-02-02 19:11:26.706 [info] [192.168.26.202][b9fc0f49][ExtensionHostConnection] <1618> Extension Host Process exited with code: 0, signal: null.
+2025-02-02 19:11:32.691 [info] [192.168.0.74][0fe94ee3][ManagementConnection] New connection established.
+2025-02-02 19:11:33.271 [info] [192.168.0.74][3436bc06][ExtensionHostConnection] New connection established.
+2025-02-02 19:11:33.279 [info] [192.168.0.74][3436bc06][ExtensionHostConnection] <9735> Launched Extension Host Process.

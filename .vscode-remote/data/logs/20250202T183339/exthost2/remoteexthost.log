@@ -18,3 +18,6 @@
 2025-02-02 18:37:02.064 [info] ExtensionService#_doActivateExtension ms-python.python, startup: false, activationEvent: 'onLanguage:python', root cause: ms-python.debugpy
 2025-02-02 18:37:02.831 [info] ExtensionService#_doActivateExtension ms-python.debugpy, startup: false, activationEvent: 'onLanguage:python'
 2025-02-02 18:38:41.269 [info] ExtensionService#_doActivateExtension vscode.simple-browser, startup: false, activationEvent: 'onCommand:simpleBrowser.api.open'
+2025-02-02 19:11:26.622 [info] Extension host terminating: received terminate message from renderer
+2025-02-02 19:11:26.623 [info] Lock '/workspace/.vscode-remote/data/User/workspaceStorage/7cc174a2/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+2025-02-02 19:11:26.675 [info] Extension host with pid 1618 exiting with code 0
