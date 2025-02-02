@@ -6,7 +6,7 @@ SECRET_KEY = 'django-insecure-d-4ssstud6o7krn@qiy)^p#@6s@a9xed-wb-3h8)_v5nbf3f!h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*",]
+ALLOWED_HOSTS = ["*", "8000-samanthamos-thaimassage-hqf3rho7qx6.ws-eu117.gitpod.io",]
 
 
 INSTALLED_APPS = [
@@ -23,7 +23,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -103,7 +103,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-samanthamos-thaimassage-hqf3rho7qx6.ws-eu117.gitpod.io/',]
+CSRF_TRUSTED_ORIGINS = ['https://8000-samanthamos-thaimassage-hqf3rho7qx6.ws-eu117.gitpod.io',]
 
 # Set session timeout to 2 hours (7200 seconds)
 SESSION_COOKIE_AGE = 7200
