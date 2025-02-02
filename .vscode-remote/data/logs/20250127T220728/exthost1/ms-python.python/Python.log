@@ -1,5 +1,0 @@
-2025-01-27 22:07:39.503 [warning] Dir "/workspace/project-4/.pixi/envs" is not watchable (directory does not exist)
-2025-01-27 22:07:39.598 [info] Python interpreter path: ~/.pyenv/shims/python
-2025-01-27 22:07:39.858 [info] > ~/.pyenv/bin/pyenv which python
-2025-01-27 22:07:39.858 [info] cwd: .
-2025-01-27 22:07:41.254 [info] Starting Jedi language server for project-4.
