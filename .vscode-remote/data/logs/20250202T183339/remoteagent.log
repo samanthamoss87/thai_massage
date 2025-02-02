@@ -15,3 +15,16 @@
 2025-02-02 18:36:03.171 [info] [192.168.26.202][b9fc0f49][ExtensionHostConnection] New connection established.
 2025-02-02 18:36:03.177 [info] [192.168.26.202][b9fc0f49][ExtensionHostConnection] <1618> Launched Extension Host Process.
 2025-02-02 18:56:24.644 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2025-02-02 18:58:58.544 [warning] [File Watcher (node.js)] Watcher shutdown because watched path got deleted
+2025-02-02 18:59:06.799 [error] TypeError: Cannot read properties of undefined (reading 'j')
+    at Y (/ide/node_modules/google-protobuf/google-protobuf.js:119:395)
+    at X (/ide/node_modules/google-protobuf/google-protobuf.js:117:347)
+    at W.U (/ide/node_modules/google-protobuf/google-protobuf.js:127:457)
+    at jspb.Map.serializeBinary (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/index.js:1:219531)
+    at proto.ide_metrics_api.ReportErrorRequest.serializeBinaryToWriter (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/idemetrics_pb.js:1342:7)
+    at proto.ide_metrics_api.ReportErrorRequest.serializeBinary (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/index.js:1:250845)
+    at t.frameRequest (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:24539)
+    at e.send (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:12717)
+    at t.unary (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:24339)
+    at MetricsServiceClient.reportError (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/idemetrics_pb_service.js:153:21)
+    at CP.m (file:///ide/out/server-main.js:178:7306)
