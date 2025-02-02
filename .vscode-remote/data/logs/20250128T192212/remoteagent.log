@@ -1,0 +1,32 @@
+2025-01-28 19:22:13.000 [info] 
+
+
+
+
+2025-01-28 19:22:13.019 [info] Extension host agent started.
+2025-01-28 19:22:13.109 [info] Extension 'gitpod.gitpod-theme' v0.0.2 is already installed. Use '--force' option to update to latest version or provide '@<version>' to install a specific version, for example: 'gitpod.gitpod-theme@1.2.3'.
+2025-01-28 19:22:13.109 [info] Extension 'github.vscode-pull-request-github' v0.102.0 is already installed. Use '--force' option to update to latest version or provide '@<version>' to install a specific version, for example: 'github.vscode-pull-request-github@1.2.3'.
+2025-01-28 19:22:19.818 [info] [192.168.26.202][7e183f82][ManagementConnection] New connection established.
+2025-01-28 19:22:20.413 [info] [192.168.26.202][bdfc0db9][ExtensionHostConnection] New connection established.
+2025-01-28 19:22:20.883 [info] [192.168.26.202][bdfc0db9][ExtensionHostConnection] <323> Launched Extension Host Process.
+2025-01-28 19:50:03.042 [error] TypeError: Cannot read properties of undefined (reading 'j')
+    at Y (/ide/node_modules/google-protobuf/google-protobuf.js:119:395)
+    at X (/ide/node_modules/google-protobuf/google-protobuf.js:117:347)
+    at W.U (/ide/node_modules/google-protobuf/google-protobuf.js:127:457)
+    at jspb.Map.serializeBinary (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/index.js:1:219531)
+    at proto.ide_metrics_api.ReportErrorRequest.serializeBinaryToWriter (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/idemetrics_pb.js:1342:7)
+    at proto.ide_metrics_api.ReportErrorRequest.serializeBinary (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/index.js:1:250845)
+    at t.frameRequest (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:24539)
+    at e.send (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:12717)
+    at t.unary (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:24339)
+    at MetricsServiceClient.reportError (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/idemetrics_pb_service.js:153:21)
+    at CP.m (file:///ide/out/server-main.js:178:7306)
+2025-01-28 20:05:43.977 [info] Getting Manifest... wholroyd.jinja
+2025-01-28 20:05:44.266 [info] Installing extension: wholroyd.jinja {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"installOnlyNewlyAddedFromExtensionPack":true,"isApplicationScoped":false,"profileLocation":{"$mid":1,"fsPath":"/workspace/.vscode-remote/extensions/extensions.json","external":"file:///workspace/.vscode-remote/extensions/extensions.json","path":"/workspace/.vscode-remote/extensions/extensions.json","scheme":"file"},"productVersion":{"version":"1.96.3","date":"2025-01-14T18:16:31.093Z"}}
+2025-01-28 20:05:44.897 [error] Could not load vsce-sign module Cannot find package 'node-ovsx-sign' imported from /ide/out/server-main.js
+2025-01-28 20:05:44.897 [info] Extension signature verification is not done: wholroyd.jinja
+2025-01-28 20:05:44.914 [info] Extracted extension to file:///workspace/.vscode-remote/extensions/wholroyd.jinja-0.0.8-universal: wholroyd.jinja
+2025-01-28 20:05:44.917 [info] Renamed to /workspace/.vscode-remote/extensions/wholroyd.jinja-0.0.8-universal
+2025-01-28 20:05:44.930 [info] Extension installed successfully: wholroyd.jinja file:///workspace/.vscode-remote/extensions/extensions.json
+2025-01-28 20:41:45.248 [info] [192.168.26.202][7e183f82][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2025-01-28 20:41:45.407 [info] [192.168.26.202][bdfc0db9][ExtensionHostConnection] <323> Extension Host Process exited with code: 0, signal: null.

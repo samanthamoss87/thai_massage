@@ -1,0 +1,5 @@
+[Error - 8:41:45 PM] Request textDocument/documentColor failed.
+Error: Starting server failed
+    at D.$start (/ide/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:276513)
+    at D.sendRequest (/ide/extensions/html-language-features/client/dist/node/htmlClientMain.js:1:259999)
+    at Fb.provideColors (file:///ide/out/vs/workbench/api/node/extensionHostProcess.js:138:150299)

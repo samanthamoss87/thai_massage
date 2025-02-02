@@ -1,0 +1,27 @@
+2025-01-31 19:51:16.033 [warning] /home/gitpod/.ssh/config: ENOENT: no such file or directory, open '/home/gitpod/.ssh/config'
+2025-01-31 19:51:16.033 [info] Activation> Extension version: 0.102.0
+2025-01-31 19:51:17.966 [info] Looking for git repository
+2025-01-31 19:51:17.966 [info] Found 0 repositories during activation
+2025-01-31 19:51:17.966 [info] Git repository found, initializing review manager and pr tree view.
+2025-01-31 19:51:17.970 [info] Registering git provider
+2025-01-31 19:51:17.970 [info] Review+0> Validate state in progress
+2025-01-31 19:51:17.970 [info] Review+0> Validating state...
+2025-01-31 19:51:18.196 [info] Found GitHub remote for folder /workspace/project-4
+2025-01-31 19:51:18.444 [info] Trying to use globalState for assignableUsers.
+2025-01-31 19:51:18.567 [info] Review+0> No matching pull request metadata found locally for current branch main
+2025-01-31 19:51:18.811 [info] Review+0> No matching pull request metadata found on GitHub for current branch main
+2025-01-31 19:51:19.011 [info] Using globalState assignableUsers for 1.
+2025-01-31 19:54:52.943 [info] Repo state for file:///workspace/project-4 changed.
+2025-01-31 19:54:52.943 [info] Repo file:///workspace/project-4 has already been setup.
+2025-01-31 21:25:28.618 [info] Review+0> Validate state in progress
+2025-01-31 21:25:28.618 [info] Review+0> Validating state...
+2025-01-31 21:25:28.956 [info] Found GitHub remote for folder /workspace/project-4
+2025-01-31 21:25:28.957 [info] Using in-memory cached assignable users.
+2025-01-31 21:25:28.965 [info] Review+0> No matching pull request metadata found locally for current branch main
+2025-01-31 21:25:29.217 [info] Review+0> No matching pull request metadata found on GitHub for current branch main
+2025-01-31 21:25:33.058 [info] Review+0> Validate state in progress
+2025-01-31 21:25:33.058 [info] Review+0> Validating state...
+2025-01-31 21:25:33.270 [info] Found GitHub remote for folder /workspace/project-4
+2025-01-31 21:25:33.271 [info] Using in-memory cached assignable users.
+2025-01-31 21:25:33.279 [info] Review+0> No matching pull request metadata found locally for current branch main
+2025-01-31 21:25:33.517 [info] Review+0> No matching pull request metadata found on GitHub for current branch main

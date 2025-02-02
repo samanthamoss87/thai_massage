@@ -1,0 +1,52 @@
+2025-02-02 18:33:49.404 [info] [main] Log level: Info
+2025-02-02 18:33:49.405 [info] [main] Validating found git in: "git"
+2025-02-02 18:33:49.405 [info] [main] Using git "2.47.0" from "git"
+2025-02-02 18:33:49.405 [info] [Model][doInitialScan] Initial repository scan started
+2025-02-02 18:33:49.405 [info] > git rev-parse --show-toplevel [7ms]
+2025-02-02 18:33:49.405 [info] > git rev-parse --git-dir --git-common-dir [9ms]
+2025-02-02 18:33:49.405 [info] [Model][openRepository] Opened repository: /workspace/project-4
+2025-02-02 18:33:49.405 [info] > git rev-parse --show-toplevel [7ms]
+2025-02-02 18:33:49.405 [info] > git config --get commit.template [13ms]
+2025-02-02 18:33:49.405 [info] > git rev-parse --show-toplevel [10ms]
+2025-02-02 18:33:49.405 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-02-02 18:33:49.405 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2025-02-02 18:33:49.405 [info] > git status -z -uall [89ms]
+2025-02-02 18:33:49.405 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [10ms]
+2025-02-02 18:33:49.405 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [8ms]
+2025-02-02 18:33:49.405 [info] > git config --get commit.template [8ms]
+2025-02-02 18:33:49.405 [info] > git config --local branch.main.vscode-merge-base [2ms]
+2025-02-02 18:33:49.405 [warning] [Git][config] git config failed: Failed to execute git
+2025-02-02 18:33:49.405 [info] > git reflog main --grep-reflog=branch: Created from *. [6ms]
+2025-02-02 18:33:49.405 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [7ms]
+2025-02-02 18:33:49.405 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [3ms]
+2025-02-02 18:33:49.405 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2025-02-02 18:33:49.405 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2025-02-02 18:33:49.405 [info] > git status -z -uall [5ms]
+2025-02-02 18:33:49.405 [info] > git merge-base refs/heads/main refs/remotes/origin/main [52ms]
+2025-02-02 18:33:49.405 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [220ms]
+2025-02-02 18:33:49.405 [info] > git fetch [501ms]
+2025-02-02 18:33:49.405 [info] > git diff --name-status -z --diff-filter=ADMR 4c6baa97e23413099420888f348001739d337f85...refs/remotes/origin/main [225ms]
+2025-02-02 18:33:49.405 [info] > git merge-base refs/heads/main refs/remotes/origin/main [10ms]
+2025-02-02 18:33:49.405 [info] > git config --get commit.template [6ms]
+2025-02-02 18:33:49.410 [info] > git diff --name-status -z --diff-filter=ADMR 4c6baa97e23413099420888f348001739d337f85...refs/remotes/origin/main [10ms]
+2025-02-02 18:33:49.446 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [36ms]
+2025-02-02 18:33:49.462 [info] > git status -z -uall [7ms]
+2025-02-02 18:33:49.465 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]
+2025-02-02 18:33:49.767 [info] > git show --textconv :thai_massage/thai_massage/settings.py [6ms]
+2025-02-02 18:33:49.769 [info] > git ls-files --stage -- /workspace/project-4/thai_massage/thai_massage/settings.py [2ms]
+2025-02-02 18:33:49.776 [info] > git cat-file -s dac65679a8cbb504ad5f636ff615e1fd7b2ffd76 [2ms]
+2025-02-02 18:33:49.998 [info] > git check-ignore -v -z --stdin [90ms]
+2025-02-02 18:33:50.045 [info] > git blame --root --incremental 4c6baa97e23413099420888f348001739d337f85 -- /workspace/project-4/thai_massage/thai_massage/settings.py [5ms]
+2025-02-02 18:33:50.573 [info] > git config --get commit.template [4ms]
+2025-02-02 18:33:50.581 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2025-02-02 18:33:50.592 [info] > git status -z -uall [6ms]
+2025-02-02 18:33:50.594 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]
+2025-02-02 18:33:50.883 [info] > git ls-files --stage -- /workspace/project-4/thai_massage/thai_massage/settings.py [2ms]
+2025-02-02 18:33:50.890 [info] > git cat-file -s dac65679a8cbb504ad5f636ff615e1fd7b2ffd76 [2ms]
+2025-02-02 18:33:51.111 [info] > git show --textconv :thai_massage/thai_massage/settings.py [3ms]
+2025-02-02 18:33:52.429 [info] > git config --local branch.main.github-pr-owner-number [220ms]
+2025-02-02 18:33:52.429 [warning] [Git][config] git config failed: Failed to execute git
+2025-02-02 18:35:02.636 [info] > git config --get commit.template [8ms]
+2025-02-02 18:35:02.636 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [2ms]
+2025-02-02 18:35:02.653 [info] > git status -z -uall [10ms]
+2025-02-02 18:35:02.656 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]

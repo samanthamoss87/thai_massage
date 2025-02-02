@@ -1,0 +1,25 @@
+2025-02-01 19:31:01.738 [info] 
+
+
+
+
+2025-02-01 19:31:01.772 [info] Extension host agent started.
+2025-02-01 19:31:01.877 [info] Extension 'gitpod.gitpod-theme' v0.0.2 is already installed. Use '--force' option to update to latest version or provide '@<version>' to install a specific version, for example: 'gitpod.gitpod-theme@1.2.3'.
+2025-02-01 19:31:01.877 [info] Extension 'github.vscode-pull-request-github' v0.102.0 is already installed. Use '--force' option to update to latest version or provide '@<version>' to install a specific version, for example: 'github.vscode-pull-request-github@1.2.3'.
+2025-02-01 19:31:05.311 [info] [192.168.26.202][5bf6fdd3][ManagementConnection] New connection established.
+2025-02-01 19:31:06.009 [info] [192.168.85.138][a6969e6a][ExtensionHostConnection] New connection established.
+2025-02-01 19:31:06.756 [info] [192.168.85.138][a6969e6a][ExtensionHostConnection] <322> Launched Extension Host Process.
+2025-02-01 21:17:58.479 [error] TypeError: Cannot read properties of undefined (reading 'j')
+    at Y (/ide/node_modules/google-protobuf/google-protobuf.js:119:395)
+    at X (/ide/node_modules/google-protobuf/google-protobuf.js:117:347)
+    at W.U (/ide/node_modules/google-protobuf/google-protobuf.js:127:457)
+    at jspb.Map.serializeBinary (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/index.js:1:219531)
+    at proto.ide_metrics_api.ReportErrorRequest.serializeBinaryToWriter (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/idemetrics_pb.js:1342:7)
+    at proto.ide_metrics_api.ReportErrorRequest.serializeBinary (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/index.js:1:250845)
+    at t.frameRequest (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:24539)
+    at e.send (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:12717)
+    at t.unary (/ide/node_modules/@improbable-eng/grpc-web/dist/grpc-web-client.js:1:24339)
+    at MetricsServiceClient.reportError (/ide/node_modules/@gitpod/ide-metrics-api-grpcweb/lib/idemetrics_pb_service.js:153:21)
+    at CP.m (file:///ide/out/server-main.js:178:7306)
+2025-02-01 21:21:04.281 [info] [192.168.26.202][5bf6fdd3][ManagementConnection] The client has disconnected gracefully, so the connection will be disposed.
+2025-02-01 21:21:04.405 [info] [192.168.85.138][a6969e6a][ExtensionHostConnection] <322> Extension Host Process exited with code: 0, signal: null.

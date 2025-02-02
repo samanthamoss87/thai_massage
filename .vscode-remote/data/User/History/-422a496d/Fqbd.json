@@ -1,0 +1,10 @@
+{
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "gitpod.openInStable.neverPrompt": true,
+    "redhat.telemetry.enabled": true,
+    "workbench.startupEditor": "none"
+}

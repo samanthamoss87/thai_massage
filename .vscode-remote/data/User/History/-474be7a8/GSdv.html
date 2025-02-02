@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Treatments - Thai Siam Massage {% endblock %}
+
+{% block content %}
+<!-- Masthead-->
+<header class="masthead masthead-banner">
+  <div class="container">
+    <div class="masthead-heading text-uppercase">Our Treatments</div>
+  </div>
+</header>
+
+<!-- Treatments -->
+<section class="page-section" id="treatment">
+  <div class="container">
+    <div class="row flex justify-content-center align-items-start mb-5">
+      <div class="col-lg-6 col-sm-12">
+        <h2 class="treatment-heading text-uppercase">Our Top Treatments</h2>
+        <p class="treatment-subheading text-muted">30, 60, 120 Minutes</p>
+      </div>
+      <div class="col-lg-6 col-sm-12 mt-3">
+        <a href="{% url 'book_now' %}" class="btn btn-outline-success text-uppercase btn-lg">
+          Book Your Treatment
+        </a>
+      </div>
+    </div>
+
+
+    {% for treatment in treatments %}
+    {% if forloop.first or forloop.counter|divisible:2 %}
+    <div class="row mb-5">
+      {% endif %}
+      <div class="col-lg-6 col-sm-12">
+        <div class="treatments">
+          <h3 class="treatments-title">{{treatment.title}}</h3>
+          <p class="treatments-price">
+            &#8364; 55.00 .... &#8364;80.00 .... &#8364;110.00
+          </p>
+          <p class="treatments-description">
+            {{treatment.description}}
+          </p>
+        </div>
+      </div>
+      <!-- <div class="col-lg-6 col-sm-12">
+        <div class="treatments">
+          <h3 class="treatments-title">Hot Stone Massage</h3>
+          <p class="treatments-price">
+            &#8364; 55.00 .... &#8364;80.00 .... &#8364;110.00
+          </p>
+          <p class="treatments-description">
+            As an extension to the therapists own hands, smooth, heated
+            stones are placed on the body warming muscles, relieving tension
+            or pain. This treatment comes with health precautions for
+            pregnant women and those with open wounds. Please contact us for
+            further information.
+          </p>
+        </div>
+      </div> -->
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

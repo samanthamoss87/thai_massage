@@ -1,0 +1,55 @@
+2025-02-01 19:31:09.390 [warning] Dir "/workspace/project-4/.pixi/envs" is not watchable (directory does not exist)
+2025-02-01 19:31:09.531 [info] Python interpreter path: ~/.pyenv/shims/python
+2025-02-01 19:31:09.885 [info] > ~/.pyenv/bin/pyenv which python
+2025-02-01 19:31:09.885 [info] cwd: .
+2025-02-01 19:31:12.315 [info] Starting Jedi language server for project-4.
+2025-02-01 19:35:11.904 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:37:36.457 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:37:45.593 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:37:52.486 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:38:06.433 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:38:36.803 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:39:24.368 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:39:42.831 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:40:04.469 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:40:10.202 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/tests.py
+2025-02-01 19:43:52.189 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:43:54.188 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:44:13.506 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:44:21.169 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:44:26.448 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:44:31.392 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:44:35.069 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:44:38.693 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:44:41.246 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:44:57.636 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/urls.py
+2025-02-01 19:45:20.498 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:45:30.684 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 19:46:09.136 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/urls.py
+2025-02-01 20:57:06.410 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:02:47.417 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:04:15.791 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:05:07.076 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 21:05:11.820 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 21:05:13.168 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 21:05:51.084 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/urls.py
+2025-02-01 21:05:57.165 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/urls.py
+2025-02-01 21:06:12.488 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/booking/views.py
+2025-02-01 21:12:59.838 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:14:07.565 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:14:09.183 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:14:17.833 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:14:35.790 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:15:14.916 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:15:18.052 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:15:21.940 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:15:26.406 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:15:30.492 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:15:38.085 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:15:42.407 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:15:45.785 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:15:50.022 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:17:13.473 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:17:18.374 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:17:35.840 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py
+2025-02-01 21:18:08.788 [info] Discover tests for workspace name: project-4 - uri: /workspace/project-4/thai_massage/thai_massage/settings.py

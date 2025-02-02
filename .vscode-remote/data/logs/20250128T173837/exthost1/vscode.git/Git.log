@@ -1,0 +1,41 @@
+2025-01-28 17:38:50.622 [info] [main] Log level: Info
+2025-01-28 17:38:50.622 [info] [main] Validating found git in: "git"
+2025-01-28 17:38:50.622 [info] [main] Using git "2.47.0" from "git"
+2025-01-28 17:38:50.622 [info] [Model][doInitialScan] Initial repository scan started
+2025-01-28 17:38:50.622 [info] > git rev-parse --show-toplevel [3ms]
+2025-01-28 17:38:50.622 [info] > git rev-parse --git-dir --git-common-dir [20ms]
+2025-01-28 17:38:50.622 [info] [Model][openRepository] Opened repository: /workspace/project-4
+2025-01-28 17:38:50.622 [info] > git config --get commit.template [6ms]
+2025-01-28 17:38:50.622 [info] > git rev-parse --show-toplevel [2ms]
+2025-01-28 17:38:50.622 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [75ms]
+2025-01-28 17:38:50.622 [info] > git rev-parse --show-toplevel [2ms]
+2025-01-28 17:38:50.622 [info] [Model][doInitialScan] Initial repository scan completed - repositories (1), closed repositories (0), parent repositories (0), unsafe repositories (0)
+2025-01-28 17:38:50.622 [info] > git status -z -uall [5ms]
+2025-01-28 17:38:50.622 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [2ms]
+2025-01-28 17:38:50.622 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [6ms]
+2025-01-28 17:38:50.622 [info] > git config --get commit.template [5ms]
+2025-01-28 17:38:50.622 [info] > git config --local branch.main.vscode-merge-base [5ms]
+2025-01-28 17:38:50.622 [warning] [Git][config] git config failed: Failed to execute git
+2025-01-28 17:38:50.622 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [4ms]
+2025-01-28 17:38:50.622 [info] > git status -z -uall [5ms]
+2025-01-28 17:38:50.622 [info] > git reflog main --grep-reflog=branch: Created from *. [10ms]
+2025-01-28 17:38:50.622 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+2025-01-28 17:38:50.622 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [7ms]
+2025-01-28 17:38:50.622 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2025-01-28 17:38:50.622 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2025-01-28 17:38:50.622 [info] > git merge-base refs/heads/main refs/remotes/origin/main [8ms]
+2025-01-28 17:38:50.622 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [35ms]
+2025-01-28 17:38:50.622 [info] > git diff --name-status -z --diff-filter=ADMR 00688f229014ab96f4971e6d93091b37a6db0a7b...refs/remotes/origin/main [5ms]
+2025-01-28 17:38:50.622 [info] > git config --local branch.main.vscode-merge-base [1ms]
+2025-01-28 17:38:50.622 [warning] [Git][config] git config failed: Failed to execute git
+2025-01-28 17:38:50.622 [info] > git reflog main --grep-reflog=branch: Created from *. [3ms]
+2025-01-28 17:38:50.623 [info] > git symbolic-ref --short refs/remotes/origin/HEAD [123ms]
+2025-01-28 17:38:50.623 [info] fatal: ref refs/remotes/origin/HEAD is not a symbolic ref
+2025-01-28 17:38:50.623 [warning] [Repository][getDefaultBranch] Failed to get default branch details: Failed to execute git.
+2025-01-28 17:38:51.196 [info] > git check-ignore -v -z --stdin [12ms]
+2025-01-28 17:38:51.196 [info] > git show --textconv :thai_massage/manage.py [6ms]
+2025-01-28 17:38:51.197 [info] > git ls-files --stage -- /workspace/project-4/thai_massage/manage.py [2ms]
+2025-01-28 17:38:51.204 [info] > git cat-file -s df580cd766972c347ca1e32551d17c6c43ba75e4 [2ms]
+2025-01-28 17:38:51.441 [info] > git blame --root --incremental 00688f229014ab96f4971e6d93091b37a6db0a7b -- /workspace/project-4/thai_massage/manage.py [3ms]
+2025-01-28 17:38:53.426 [info] > git config --local branch.main.github-pr-owner-number [107ms]
+2025-01-28 17:38:53.426 [warning] [Git][config] git config failed: Failed to execute git

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Booking - Kan Thai Siam Massage</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/custom_style.css">
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">
+                    <img class="logo" src="assets/img/navbar-logo.png" alt="Nav Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="treatment.html">Treatments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="booking.html">Book Now</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        {% block content %}
+        <!-- Masthead-->
+        <header class="masthead masthead-banner">
+            <div class="container">
+                <div class="masthead-heading text-uppercase">Book Your Hours</div>
+            </div>
+        </header>
+
+
+        <!-- Calendar -->
+        <sectioin class="page-section" id="booking">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-sm-12 cal-container">
+                        <h2 class="cal-heading text-uppercase mb-5">Select Date</h2>
+                        <div class="cal-con">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <button id="prevMonth" class="btn btn-success">&lt;</button>
+                                <h3 id="currentMonth">January 2025</h3>
+                                <button id="nextMonth" class="btn btn-success">&gt;</button>
+                            </div>
+                    
+                            <div class="calendar" id="calendar">
+                                <!-- Days will be injected dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sectioin>
+        {% endblock %}
+        
+        
+        
