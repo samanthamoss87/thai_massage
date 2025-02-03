@@ -1,0 +1,1 @@
+web: gunicorn thai_massage.wsgi --log-file -
