@@ -19,6 +19,8 @@
     - [Banner](#home-page)
     - [Home Page](#home-page)
     - [Treatments](#treatments)
+    - [Book Now](#book-now)
+    - [Login](#login)
     - [Privacy Policy](#privacy-policy)
     - [Terms and Conditions](#terms-and-conditions)
 4. [Future Implementations](#future-implementations)
