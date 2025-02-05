@@ -30,7 +30,7 @@
                 {% endif %}
 
                 <!-- Booking Form -->
-                <form method="post" action="{% url 'book_now' %}">
+                <form method="post" action="{% url 'book_now' %}" id="booking-form">
                   {% csrf_token %}
                   <div class="mb-3">
                     <label class="form-label">Select Treatment:</label>
