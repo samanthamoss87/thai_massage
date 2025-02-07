@@ -9,7 +9,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 
 
-from .forms import UserRegisterForm, UserLoginForm, BookingForm
+from .forms import UserRegisterForm, UserLoginForm, BookingForm, ContactForm
 from .models import Treatments, UserProfile, Booking
 
 # Home Page
@@ -38,6 +38,7 @@ def book_now(request):
     
     return render(request, 'booking.html', {'form': form})
 
+# Booking Success Page
 def booking_success(request):
     return render(request, 'booking_success.html')
 
@@ -56,15 +57,23 @@ def cancel_booking(request, booking_id):
 
 # Contact Page
 def contact(request):
-    return render(request, 'contact.html')
+    success = False
+    if request.method == "POST":
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            success = True
+            return redirect('home')
+    else:
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form, 'success': success})
 
 # Register Page
 def register_view(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            print("user created")
+            user = form.save
             # Log the user in
             login(request, user, backend='booking.backends.EmailAuthBackend')
             return redirect('login')

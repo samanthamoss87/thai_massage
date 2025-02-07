@@ -5,8 +5,10 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 import uuid
 import datetime
-from .models import UserProfile, Booking
+from .models import UserProfile, Booking, Contact
 
+
+# User Registration Form
 class UserRegisterForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=True)
     last_name = forms.CharField(max_length=30, required=True)
@@ -40,6 +42,7 @@ class UserRegisterForm(UserCreationForm):
         return user
 
 
+# User Login Form
 class UserLoginForm(AuthenticationForm):
     username = forms.EmailField(
         widget=forms.EmailInput(attrs={'autofocus': True}),
@@ -110,3 +113,11 @@ class BookingForm(forms.ModelForm):
                 raise ValidationError("This time slot is already booked")
 
         return cleaned_data
+
+
+
+# Contact Form 
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ['name', 'email', 'subject', 'message']
