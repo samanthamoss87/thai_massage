@@ -31,6 +31,7 @@ def book_now(request):
             booking.user = request.user
             booking.duration = int(form.cleaned_data['duration'])
             booking.save()
+            return redirect('booking_success')
 
     else:
         form = BookingForm()
