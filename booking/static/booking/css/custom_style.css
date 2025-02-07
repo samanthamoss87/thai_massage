@@ -167,3 +167,10 @@
     font-weight: lighter;
 }
 /* End Dashboard */
+
+
+/* Contact page */
+#contact,
+#contact-form label{
+    font-family: 'Poppins' !important;
+}
