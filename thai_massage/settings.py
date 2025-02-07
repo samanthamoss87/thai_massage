@@ -118,4 +118,3 @@ SESSION_COOKIE_AGE = 7200
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-

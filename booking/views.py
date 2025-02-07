@@ -3,6 +3,12 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
+from django.core.mail import EmailMessage
+from django.template.loader import render_to_string
+from django.core.mail import send_mail
+from django.conf import settings
+
+
 from .forms import UserRegisterForm, UserLoginForm, BookingForm
 from .models import Treatments, UserProfile, Booking
 
@@ -23,9 +29,9 @@ def book_now(request):
         if form.is_valid():
             booking = form.save(commit=False)
             booking.user = request.user
-            booking.duration = int(form.cleaned_data['duration'])  # Save the selected duration
+            booking.duration = int(form.cleaned_data['duration'])
             booking.save()
-            return redirect('booking_success')
+
     else:
         form = BookingForm()
     

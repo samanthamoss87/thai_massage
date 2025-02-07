@@ -18,6 +18,18 @@
         <h2 class="section-heading text-uppercase">Thank You for Booking</h2>
         <p>Your appointment has been successfully scheduled.</p>
         <a href="{% url 'dashboard' %}" class="btn btn-primary">Go to Dashboard</a>
+
+        <h2>Hi {{ username }},</h2>
+        <p>Thank you for booking with Thai Siam Massage!</p>
+        <p>Here are your booking details:</p>
+        <ul>
+          <li><strong>Treatment:</strong> {{ treatment }}</li>
+          <li><strong>Date:</strong> {{ date }}</li>
+          <li><strong>Start Time:</strong> {{ start_time }}</li>
+          <li><strong>Duration:</strong> {{ duration }} minutes</li>
+        </ul>
+        <p>We look forward to seeing you!</p>
+        <p>Best regards,<br>Thai Siam Massage Team</p>
       </div>
     </div>
   </div>
