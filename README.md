@@ -334,24 +334,31 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
     - Page markup
 - [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
     - Styling
-- [Django](https://www.djangoproject.com/)
-    - Project Backend
-- [AWS](https://aws.amazon.com/)
-    - Project Database
-- [Postgresql](https://www.postgresql.org/)
-    - Database
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+    - Fronted behavior control
+- [Python](https://www.python.org/)
+    - Project Backend Language
+
 ## Libraries 
 - [Google Fonts](https://fonts.google.com/)
     - Font style
 - [Bootstrap](https://getbootstrap.com/)
     - App Theme and Styling
+- [Email.js](https://www.emailjs.com/)
+    - To send customer message to the admin's email
 ## Platforms
 - [Github](github.com)
     - Store the code remotely for deployment
 - [Gitpod](gitpod.io)
     - Development environment for the project
 - [Heroku](https://www.heroku.com/)
-    - Deployment of the project
+    - Deployment
+- [Bootstrap Themes](https://startbootstrap.com/)
+    - Website Theme
+- [AWS](https://aws.amazon.com/)
+    - Project Database
+- [Postgresql](https://www.postgresql.org/)
+    - Database
 
 
 # Local Development & Deployment
