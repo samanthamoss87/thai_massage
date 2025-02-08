@@ -53,6 +53,30 @@
 # Project 4 - Important Notes
 For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaScript, Django, and Bootstrap to create a seamless and interactive user experience. The website allows customers to book massage sessions, and cancel their appointments effortlessly. Django powers the backend, handling user data, appointments, and admin functionality. Bootstrap ensures the site is fully responsive and visually consistent across devices. Javascript handles sending emails, responsive navbar and time selections. This project not only demonstrates my ability to integrate multiple technologies but also provides a practical, real-world solution for managing bookings efficiently.
 
+# User experience
+## Goals
+### Visitor Goals
+- People who want to have best quality thai massage.
+- People who have an interest Massage Parlour
+- Massage Parlour who want to grow and expand their business.
+- Massage Parlour who are needing help to meet their sales targets.
+- Massage Parlour who are trying to expand the business, grow their business and create new departments.
+
+### User goals are
+- View information easily.
+- Get different types of massages
+- Contact the therapist easy with different options of contact
+- Get therapy booking facility
+- Cancel future bookings
+
+
+### Business Goals
+- Display and highlight what we are about.
+- Get an understanding about what services we do.
+- Get an understanding about what sectors we specialise in.
+- Get people to contact us to get more information.
+- Gain more customers.
+
 
 # Technologies used
 ## Languages
