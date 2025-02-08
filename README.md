@@ -117,6 +117,15 @@ python manage.py runserver
 ### Setting up your git repository
 1. Create a new repository and clone it to your computer
 2. Put all the files to the repository folder
-2. Setup your repository
-3. `git add .`, `git commit -m "your commit message"` and `git push` to the repository
-
+3. Create a file called `.python-version` and add python version to it. eg. 3.12
+4. Create a file called Procfile and add this to the file `web: gunicorn your-project-name.wsgi --log-file -`
+5. Replace `your-project-name` to your project name eg. thai-massage
+6. Now run these commands to upload the files to Github 
+    - `git add .`
+    - `git commit -m "your commit message"`
+    - `git push`
+7. Login to your [Heroku](https://www.heroku.com/) account
+8. Create a new app and give it a name
+9. Connect your github account from deployment method
+10. Search and Select your repository
+11. Click on Deploy
