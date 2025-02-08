@@ -78,6 +78,25 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 - Gain more customers.
 
 
+### User Stories
+
+<div align="center"> 
+    <img src="readme-images/user-story.png" alt="index mock up">
+</div> 
+
+- As a company I would like to see what relevant experience the massage parlour has in my area of business.
+- I would like to see what types of therapy the massage parlour specialise in.
+- As a customer looking at optimising my business's profitability and Growth i would like to see what type of massage therapy they offer throughout my business.
+- While visiting a massage therapy website, I want to Navigate through their different types of therapies seamlessly and have a direct link to contacting them. 
+- I want to be able to contact the therapist with direct open-ended questions.
+- I would want an understanding of the therapist background and experience in all areas. 
+- I want to be able to review the site and get the detail I need easily without reading huge amount of text.
+- Where I want to, I want to be able to get more detail on the specific therapy I am interested.
+- As a company I want to be able to the site wherever I am in on any form device and get an easy fluent way to navigate, find the information easy and have high-lighted points as my time is sparse.
+- I would like book sessions from the website with different types of therapy date and time.
+- I would like to cancel any future schedule.
+
+
 # Technologies used
 ## Languages
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
