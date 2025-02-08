@@ -133,3 +133,26 @@ python manage.py runserver
 11. Click on Deploy
 
 
+# Testing
+
+## Methods
+### Validation 
+- HTML has been validated with https://validator.w3.org/#validate_by_input
+- CSS has been validated with https://jigsaw.w3.org/ and auto-prefixed with https://autoprefixer.github.io/.
+- Links checked with https://validator.w3.org/checklink.
+- I also used https://pagespeed.web.dev/
+- Javascript codes have been validated with https://jshint.com/
+
+### General Testing 
+- Each feature was testing when it implemented into the code on both safari and chrome.
+- The site was sent to family and friend to review and get their feedback.
+- Contact us form have validation and will not submit without all information filled in.
+- The images were testing on all devices and browsers for performance/load speed. 
+
+### Mobile Testing
+ - I tested the site on IOS and Android device using my phone and family members phone, going through the entire process, checking button, functions, load speed, style etc.         
+- Chrome and Microsoft edge was used to inspect the site in mobile format, looking at functions, responsiveness and style.
+
+### Desktop Testing 
+- The website was designed on Microsoft laptop, and it was previewed in Chrome and Microsoft edge. 
+- The website was tested by family and friends and numerous different devices.
