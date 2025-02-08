@@ -164,3 +164,12 @@ python manage.py runserver
 - User doesn't get any email after booking a schedule due to smtp server error
 - Privacy Policy and Terms and conditions page is not working
 - Automated git deployment is not working
+
+
+# Credits
+
+## Acknowledgement
+- My joint business partner of Thai Siam Massage and Richard Lane helped me make the blueprint of the app
+
+# Contact
+- Please feel free to contact me at samantha.moss87@aol.com
