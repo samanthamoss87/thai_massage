@@ -9,21 +9,22 @@
     - [Typography](#typography)
     - [Imagery](#imagery)
     - [Programs Used](#programs-used)
-    - [Photo and Video](#photo-and-video)
-    - [Icons](#icons)
 3. [Features](#features)
     - [General Features](#general-features)
     - [All pages](#all-pages)
     - [Nav bar](#nav-bar)
     - [Footer](#footer)
-    - [Banner](#home-page)
     - [Home Page](#home-page)
     - [Treatments](#treatments)
     - [Book Now](#book-now)
     - [Login](#login)
-    - [Privacy Policy](#privacy-policy)
-    - [Terms and Conditions](#terms-and-conditions)
+    - [Dashboard](#dashboard)
+    - [Booking Success](#booking-success)
+    - [Contact](#contact)
 4. [Future Implementations](#future-implementations)
+    - [Calender View](#main-dashboard-calendar-view)
+    - [New Appointment Window (Modal/Popup)](#new-appointment-window-modalpopup)
+    - [Customer Wallet](#customer-wallet)
 5. [Technologies used](#technologies-used)
     - [Languages](#languages)
     - [Libraries](#libraries)
@@ -97,6 +98,236 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 - I would like to cancel any future schedule.
 
 
+# Design
+## Colour Scheme
+<div align="center"> 
+    <img src="readme-images/color-palatte.png" alt="Colour Palatte">
+</div> 
+
+- #000000 was used in all the font text
+- #198754 was used as the main color such as Footer Background, Button Text, Border and backgraund
+- #ffc800 was used as the hover color of the navbar links
+- #FFFFFF was the main background on all ages
+
+## Typography
+
+<div align="center"> 
+    <img src="readme-images/typography.png" alt="Font Style">
+</div>
+
+- My primary font is [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins) which is on all pages of the website
+- I used Poppins font as it is clear for everyone to read, whilst also having a great style look for a Massage Parlour
+
+
+## Imagery
+<div align="center"> 
+    <img src="readme-images/imagery.png" alt="Imagery">
+</div> 
+
+- These are the photos I used for my website that all are copright free.
+- I researched hundreds of photos to get the best image to represent the relevant area of my business.
+- They matched in line with the Businesses and the sectors we are working in.
+
+
+## Programs Used
+- [Link to simple imager resizer](https://www.simpleimageresizer.com/)
+
+- [Link to tiny png](https://tinypng.com/)
+
+- [Link to free convert](https://www.freeconvert.com/)
+    - These are the programs I used to resize and convert the image to increase the performance of the site for mobile and desktop usage.
+
+
+# Features
+## General features
+### All pages
+## Nav Bar
+<div align="center"> 
+    <img src="readme-images/nav-desktop.png" alt="Nav bar">
+</div> 
+
+- This Nav bar is on all pages with the minimal design. 
+- This Nav bar is fixed in place, so when you scroll down you can still access all pages.
+- If you click on the logo, it will take you back to the home page. 
+- Project 4 - There is now 5 pages, as there is a dashboard page added for the user to get more booking table of the future bookings
+
+<div align="center"> 
+    <img src="readme-images/nav-mobile.png" alt="Nav bar in phone format">
+</div> 
+
+- This is the look of the nav bar in the format of a phone
+- I wanted it to look sleeker and user friendly in the style.
+- Anything below 768px will show this format by using media queries. 
+
+<div align="center"> 
+    <img src="readme-images/nav-mobile-expand.png" alt="Nav hamburger">
+</div> 
+
+- This is the look of the Hamburger Nav.
+- When you click on the Menu Button it brings the Nav list up.
+- If you click on the logo, it will take you back to the home page.
+
+## Footer
+<div align="center"> 
+    <img src="readme-images/footer-desktop.png" alt="Footer">
+</div> 
+
+- This footer is also accessible on all pages.
+- The footer also holds the Privace Ploicy and Terms and Conditions but those are not working. You have to add you own terms and conditions and privacy policies.
+- The is aligned into the middle of the screen and always white in color.
+-  Project 4 - Twitter, Facebook, and Linkedln social links added but they are not functional.
+
+<div align="center"> 
+    <img src="readme-images/footer-mobile.png" alt="Footer in phone format">
+</div> 
+
+- This is what the phone looks like in the phone format.
+- Anything below 768px will show this format using media queries.
+
+
+## Home Page
+<div align="center"> 
+    <img src="readme-images/hero-banner.png" alt="Home page banner">
+</div> 
+
+- This is my main page Hero, I wanted to make it eye catching, stylish, easy to read, easy to navigate, while also been user friendly.
+- With hours of research I thought this iamge was the best way to convey the type of my business.
+
+<div align="center"> 
+    <img src="readme-images/welcome-section.png" alt="Welcome Section">
+</div> 
+
+- I added this text to make the front page be attractive to the eye, whilst also been business specific.
+- Knowing that there is no background iamge, I wanted to add text to it to draw people in.
+
+
+<div align="center"> 
+    <img src="readme-images/visit-us.png" alt="Our Information">
+</div> 
+
+- Project 4 - I created a section where people can find our place easily.
+- It gives the end user another direct link into the Booking page.
+
+
+## Treatments
+<div align="center"> 
+    <img src="readme-images/treatment-page.png" alt="treatment page">
+</div> 
+
+- All the treatments with title, description, price and duration are visible
+- It gives the end user another direct link into the Booking page.
+
+
+## Book now
+<div align="center"> 
+    <img src="readme-images/book-now.png" alt="Booking page">
+</div> 
+
+- Treatment booking form where user have to select treatment type, treatment duration, time and date to book a schedule
+- User must have to be a registered user of Thai Siam Massage and have to login first to book a treatment.
+
+
+## Login
+<div align="center"> 
+    <img src="readme-images/login.png" alt="Login page">
+</div> 
+
+- Customer login page where user have to provide email and password to login.
+- User must have to be a registered user of Thai Siam Massage to login
+- Direct link to the register page if user is not registered
+
+
+## Dashboard
+<div align="center"> 
+    <img src="readme-images/dashboard.png" alt="Dashboard">
+</div> 
+
+- After login user will redirect to the dashboard page
+- Future bookings of the user are there as a table
+- User can cancel any booking anytime with the cancel button
+
+## Booking Success
+<div align="center"> 
+    <img src="readme-images/booking-success.png" alt="Booking Success">
+</div> 
+
+- After booking a schedule user will redirect to the booking success page
+- Direct link for user to navigate to the dashboard
+
+
+## Contact
+<div align="center"> 
+    <img src="readme-images/contact-form.png" alt="Contact us">
+</div> 
+
+- User can send us messages through this form that will be saved to the databse
+- User's message will send to the owner's email
+
+
+
+## Future Implementations
+
+### Main Dashboard (Calendar View)
+- Time Slots: Start: 09:00 AM | End: 10:00 PM
+- Supports appointments on Hour, 30 mins, 15 mins
+- Drag and Drop for easy rescheduling
+- Color-coded based on therapist, type of massage, or status
+- Appointment Slots:
+    - Click on a time slot to open the New Appointment Window
+    - Neutral color slots can be used as labels/comments
+
+### New Appointment Window (Modal/Popup)
+
+- Customer Details
+    - Name (Text Field)
+    - Phone Numbers (Multiple Supported)
+    - Duration (Dropdown: 15/30/45/60 mins, etc.)
+    - Therapist Requested? (Checkbox)
+
+- Massage Details
+    - Type of Massage (Dropdown)
+    - Color Selection (15 colors)
+    - Repeat Appointment (Checkbox + Frequency Selector)
+
+
+- Pricing & Payment
+    - Automated Cost Calculation (Editable Field)
+    - Payment Received? (Checkbox for money tracking)
+    - Customer Wallet Payment Methods:
+        - Viva | Cash | Revolut | Voucher
+
+- Refund Button with Comments
+- Reminders & Confirmation
+- Send Confirmation? (Yes/No Toggle)
+- Comments & Notes
+- Visible Comments:
+    - Massage Type, Therapist Requested, Phone Number
+
+
+- Hidden Comments (Double Click to Access):
+    - Credit Balance/Vouchers & Prepayments
+    - Cancellation Debt (Red), Positive Balance (Green), Credit (Orange)
+
+
+### Customer Wallet
+- Balance Tracking
+    - Displays remaining balance
+    - Funds can be loaded via Viva, Cash, Revolut, Voucher
+    - Refund option available
+
+
+- Voucher Wallet
+    - Unique Voucher Numbers
+    - Payment via Viva, Cash, Revolut
+    - Balance Auto-Deducted on use
+    - Option to Transfer Voucher Balance to Customer Wallet
+
+
+- Cash Payments
+    - Separate tracking for two cash boxes
+
+
+
 # Technologies used
 ## Languages
 - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -105,6 +336,10 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
     - Styling
 - [Django](https://www.djangoproject.com/)
     - Project Backend
+- [AWS](https://aws.amazon.com/)
+    - Project Database
+- [Postgresql](https://www.postgresql.org/)
+    - Database
 ## Libraries 
 - [Google Fonts](https://fonts.google.com/)
     - Font style

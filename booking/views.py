@@ -73,7 +73,7 @@ def register_view(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            user = form.save
+            user = form.save()
             # Log the user in
             login(request, user, backend='booking.backends.EmailAuthBackend')
             return redirect('login')
