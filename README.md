@@ -33,9 +33,9 @@
     - [Local Development](#local-development)
         - [Local Preparation](#local-preparation)
         - [Local Instruction](#local-instruction)
-    - [Github Deployment](#github-deployment)
-        - [Github Preparation](#github-preparation)
-        - [Github Instrucation](#github-instruction)
+    - [Heroku Deployment](#heroku-deployment)
+        - [Repository Setup](#setting-up-your-git-repository)
+        - [Heroku Setup](#setting-up-the-heroku-app)
 7. [Testing](#testing)
     - [Methods](#methods)
     - [Validation](#validation)
@@ -124,8 +124,12 @@ python manage.py runserver
     - `git add .`
     - `git commit -m "your commit message"`
     - `git push`
+
+### Setting up the heroku app
 7. Login to your [Heroku](https://www.heroku.com/) account
 8. Create a new app and give it a name
 9. Connect your github account from deployment method
 10. Search and Select your repository
 11. Click on Deploy
+
+
