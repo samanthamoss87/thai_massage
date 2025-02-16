@@ -10660,10 +10660,10 @@ header.masthead .masthead-subheading {
   font-family: "Poppins";
 }
 header.masthead .masthead-heading {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 3.25rem;
-  font-family: "Poppins"";
+  font-family: "Poppins";
 }
 
 @media (min-width: 768px) {
