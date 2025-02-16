@@ -22,7 +22,7 @@
     - [Booking Success](#booking-success)
     - [Contact](#contact)
 4. [Future Implementations](#future-implementations)
-    - [Calender View](#main-dashboard-calendar-view)
+    - [Calendar View](#main-dashboard-calendar-view)
     - [New Appointment Window (Modal/Popup)](#new-appointment-window-modalpopup)
     - [Customer Wallet](#customer-wallet)
 5. [Technologies used](#technologies-used)
@@ -52,34 +52,38 @@
 
 
 # Project 4 - Important Notes
-For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaScript, Django, and Bootstrap to create a seamless and interactive user experience. The website allows customers to book massage sessions, and cancel their appointments effortlessly. Django powers the backend, handling user data, appointments, and admin functionality. Bootstrap ensures the site is fully responsive and visually consistent across devices. Javascript handles sending emails, responsive navbar and time selections. This project not only demonstrates my ability to integrate multiple technologies but also provides a practical, real-world solution for managing bookings efficiently.
+For Project 4, I developed a booking system for a Thai Massage business, using HTML, CSS, JavaScript, Django, and Bootstrap. The site/system was designed to create a seamless and interactive user experience. The website allows customers to book and cancel appointments effortlessly. Django was utilised to powers the backend, handling user data, appointments bookings, deal withand administration functionality. Bootstrap ensures the site is fully responsive and visually consistent across various device types. Javascript handles sending emails, responsive navbar and time selections. This project not only demonstrates my ability to integrate multiple technologies but also provides a practical, real-world solution for managing bookings efficiently for a real business who upon completion/grading for this project, will utilise this booking system and look to have me build on these functionalities in the future.
 
 # User experience
 ## Goals
 ### Visitor Goals
-- People who want to have best quality thai massage.
-- People who have an interest Massage Parlour
-- Massage Parlour who want to grow and expand their business.
-- Massage Parlour who are needing help to meet their sales targets.
-- Massage Parlour who are trying to expand the business, grow their business and create new departments.
-
+- Visitors who want to have best quality Thai massage can easily understand the range of massage services available .
+- Visitors who have an interest in massage can identify the service they require and make a appointment/booking. 
+- Visitors can manage their bookings, cancel appointments if necessary or make new/additional bookings
+- Visitors can create user accounts easily, login to make, cancel or check any bookings/appointments they may have.
+- Visitors upon making a booking can view their bookings on the booking dashboard
+- Visitors making a booking encounter a message advising their booking was successful with a link to view the bookings Dashboard.
+- Visitors can user the contact form to leave a message for Thai Massage team
 
 
 
 ### User goals are
-- View information easily.
-- Get different types of massages
-- Contact the therapist easy with different options of contact
-- Get therapy booking facility
+- View /navigate the site and obtain information easily.
+- Get information on the different types of massages available
+- Contact the business via a number of different methods, phone, contact us and make a booking
+- Make a booking for a massage treatment
 - Cancel future bookings
 
 
+
 ### Business Goals
-- Display and highlight what we are about.
-- Get an understanding about what services we do.
-- Get an understanding about what sectors we specialise in.
+- Display and highlight the massage services available
+- Get an understanding about the cost and duration of various types of treatment
 - Get people to contact us to get more information.
-- Gain more customers.
+- Gain more customer bookings to grow the businesss.
+- The Massage business would like to grow and expand its business by taking bookings online via my booking portal.
+- The Massage business would like to increase sales when phone lines are busy and by allowing customers to make out of hours bookings.
+
 
 
 ### User Stories
@@ -88,17 +92,16 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
     <img src="readme-images/user-story.png" alt="index mock up">
 </div> 
 
-- As a company I would like to see what relevant experience the massage parlour has in my area of business.
-- I would like to see what types of therapy the massage parlour specialise in.
-- As a customer looking at optimising my business's profitability and Growth i would like to see what type of massage therapy they offer throughout my business.
-- While visiting a massage therapy website, I want to Navigate through their different types of therapies seamlessly and have a direct link to contacting them. 
-- I want to be able to contact the therapist with direct open-ended questions.
-- I would want an understanding of the therapist background and experience in all areas. 
+- As a potential customer, I would like to see what relevant experiences the massage business can offer in my area.
+- I would like to see what types of therapy the massage business offers and specialises in.
+- As a customer looking at optimising the business's profitability and Growth iI would like to see what type of massage therapies are offered throughout my business.
+- While visiting a massage therapy website, I want to Navigate through their different types of  treatments seamlessly and have a direct link to contact them. 
+- I want to be able to contact the therapist with direct open-ended questions via a Contact us form.
 - I want to be able to review the site and get the detail I need easily without reading huge amount of text.
-- Where I want to, I want to be able to get more detail on the specific therapy I am interested.
-- As a company I want to be able to the site wherever I am in on any form device and get an easy fluent way to navigate, find the information easy and have high-lighted points as my time is sparse.
-- I would like book sessions from the website with different types of therapy date and time.
-- I would like to cancel any future schedule.
+- As a user I want to be able to use the site wherever I am in on any type/form of device and encounter an easy  way to navigate, find the information easily and make bookings in a time efficient manor. 
+- I would like book sessions from the website with different types of therapy, dates and times.
+- I would like to cancel any future scheduled appointments.
+
 
 
 # Design
@@ -108,9 +111,10 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 </div> 
 
 - #000000 was used in all the font text
-- #198754 was used as the main color such as Footer Background, Button Text, Border and backgraund
-- #ffc800 was used as the hover color of the navbar links
+- #198754 was used as the main colour such as Footer Background, Button Text, Border and background
+- #ffc800 was used as the hover colour of the navbar links
 - #FFFFFF was the main background on all ages
+
 
 ## Typography
 
@@ -119,7 +123,7 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 </div>
 
 - My primary font is [Poppins](https://fonts.google.com/specimen/Poppins?query=poppins) which is on all pages of the website
-- I used Poppins font as it is clear for everyone to read, whilst also having a great style look for a Massage Parlour
+- I used Poppins font as it is clear for everyone to read, whilst also having a great style look for a Massage business
 
 
 ## Imagery
@@ -127,9 +131,10 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
     <img src="readme-images/imagery.png" alt="Imagery">
 </div> 
 
-- These are the photos I used for my website that all are copright free.
+- These are the photos I used for my website that all are copyright free.
 - I researched hundreds of photos to get the best image to represent the relevant area of my business.
-- They matched in line with the Businesses and the sectors we are working in.
+- They matched in line with the Businesses and the sectors we are working within.
+
 
 
 ## Programs Used
@@ -176,9 +181,10 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 </div> 
 
 - This footer is also accessible on all pages.
-- The footer also holds the Privace Ploicy and Terms and Conditions but those are not working. You have to add you own terms and conditions and privacy policies.
-- The is aligned into the middle of the screen and always white in color.
--  Project 4 - Twitter, Facebook, and Linkedln social links added but they are not functional.
+- The footer also holds the Privacy Policy and Terms and Conditions but those are not working. You have to add you own terms and conditions and privacy policies.
+- The is aligned into the middle of the screen and always white in colour.
+-  Project 4 - Twitter, Facebook, and LinkedIn social links added but they are not functional.
+
 
 <div align="center"> 
     <img src="readme-images/footer-mobile.png" alt="Footer in phone format">
@@ -194,14 +200,14 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 </div> 
 
 - This is my main page Hero, I wanted to make it eye catching, stylish, easy to read, easy to navigate, while also been user friendly.
-- With hours of research I thought this iamge was the best way to convey the type of my business.
+- With hours of research I thought this image was the best way to convey the type of my business.
 
 <div align="center"> 
     <img src="readme-images/welcome-section.png" alt="Welcome Section">
 </div> 
 
 - I added this text to make the front page be attractive to the eye, whilst also been business specific.
-- Knowing that there is no background iamge, I wanted to add text to it to draw people in.
+- Knowing that there is no background image, I wanted to add text to it to draw people in.
 
 
 <div align="center"> 
@@ -235,9 +241,10 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
     <img src="readme-images/login.png" alt="Login page">
 </div> 
 
-- Customer login page where user have to provide email and password to login.
+- Customer login page where user has to provide email and password to login.
 - User must have to be a registered user of Thai Siam Massage to login
-- Direct link to the register page if user is not registered
+- There is a direct link to the register page if user is not registered
+
 
 
 ## Dashboard
@@ -245,9 +252,10 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
     <img src="readme-images/dashboard.png" alt="Dashboard">
 </div> 
 
-- After login user will redirect to the dashboard page
-- Future bookings of the user are there as a table
+- After login user will redirected to the dashboard page
+- Future bookings of the user are displayed within a table
 - User can cancel any booking anytime with the cancel button
+
 
 ## Booking Success
 <div align="center"> 
@@ -263,7 +271,7 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
     <img src="readme-images/contact-form.png" alt="Contact us">
 </div> 
 
-- User can send us messages through this form that will be saved to the databse
+- User can send us messages through this form that will be saved to the database
 - User's message will send to the owner's email
 
 
@@ -276,10 +284,11 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 - Time Slots: Start: 09:00 AM | End: 10:00 PM
 - Supports appointments on Hour, 30 mins, 15 mins
 - Drag and Drop for easy rescheduling
-- Color-coded based on therapist, type of massage, or status
+- Colour-coded Gant-chart dashboard with each therapist displayed in a different colour and or column, type of massage, or status
 - Appointment Slots:
     - Click on a time slot to open the New Appointment Window
-    - Neutral color slots can be used as labels/comments
+    - Neutral colour slots can be used as labels/comments
+
 
 ### New Appointment Window (Modal/Popup)
 
@@ -291,8 +300,9 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 
 - Massage Details
     - Type of Massage (Dropdown)
-    - Color Selection (15 colors)
+    - Colour Selection (15 colours)
     - Repeat Appointment (Checkbox + Frequency Selector)
+
 
 
 - Pricing & Payment
@@ -340,7 +350,7 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 - [CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
     - Styling
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-    - Fronted behavior control
+    - Fronted behaviour control
 - [Python](https://www.python.org/)
     - Project Backend Language
 
@@ -406,9 +416,9 @@ python manage.py runserver
 ### Setting up your git repository
 1. Create a new repository and clone it to your computer
 2. Put all the files to the repository folder
-3. Create a file called `.python-version` and add python version to it. eg. 3.12
+3. Create a file called `.python-version` and add python version to it. e.g. 3.12
 4. Create a file called Procfile and add this to the file `web: gunicorn your-project-name.wsgi --log-file -`
-5. Replace `your-project-name` to your project name eg. thai-massage
+5. Replace `your-project-name` to your project name e.g. thai-massage
 6. Now run these commands to upload the files to Github 
     - `git add .`
     - `git commit -m "your commit message"`
@@ -417,7 +427,7 @@ python manage.py runserver
 ### Setting up the heroku app
 7. Login to your [Heroku](https://www.heroku.com/) account
 8. Create a new app and give it a name
-9. Connect your github account from deployment method
+9. Connect your GitHub account from deployment method
 10. Search and Select your repository
 11. Click on Deploy
 
@@ -434,7 +444,7 @@ python manage.py runserver
 
 ### General Testing 
 - Each feature was testing when it implemented into the code on both safari and chrome.
-- The site was sent to family and friend to review and get their feedback.
+- The site was sent to family and friends to review and get their feedback.
 - Contact us form have validation and will not submit without all information filled in.
 - The images were testing on all devices and browsers for performance/load speed. 
 
@@ -452,14 +462,14 @@ python manage.py runserver
 - When admin and user login from the same browser, the username from userdashboard vanishes if the superuser doesn't have a name
 - Custom 404 Page is not working properly
 - User doesn't get any email after booking a schedule due to smtp server error
-- Privacy Policy and Terms and conditions page is not working
+- Privacy Policy and Terms and conditions page is not working as awaiting content from the client
 - Automated git deployment is not working
 
 
 # Credits
 
 ## Acknowledgement
-- My joint business partner of Thai Siam Massage and Richard Lane helped me make the blueprint of the app
+- My father in law owns Thai Siam Massage and I was assisted with information regarding the business by his son (my husband) Richard Lane who helped me make the blueprint of the app
 
 # Contact
 - Please feel free to contact me at samantha.moss87@aol.com
