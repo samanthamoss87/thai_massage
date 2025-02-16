@@ -269,6 +269,8 @@ For Project 4, I developed a Thai massage booking system using HTML, CSS, JavaSc
 
 
 ## Future Implementations
+### Reset Password
+- If user forgot Username or password, user can reset their passwords through links from email
 
 ### Main Dashboard (Calendar View)
 - Time Slots: Start: 09:00 AM | End: 10:00 PM
