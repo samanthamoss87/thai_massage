@@ -51,6 +51,11 @@ class UserLoginForm(AuthenticationForm):
 
 
 # Treatment booking Form
+from django import forms
+from django.core.exceptions import ValidationError
+import datetime
+from .models import Booking
+
 class BookingForm(forms.ModelForm):
     DURATION_CHOICES = [
         (30, '30 Minutes - $55'),
@@ -102,7 +107,14 @@ class BookingForm(forms.ModelForm):
             # Calculate end time
             start_dt = datetime.datetime.combine(date, start_time)
             end_dt = start_dt + datetime.timedelta(minutes=duration)
-            
+
+            # Get the current date and time
+            now = datetime.datetime.now()
+
+            # Check if the selected date and time are in the past
+            if start_dt < now:
+                raise ValidationError("You cannot book an appointment in the past.")
+
             # Check existing bookings
             conflicts = Booking.objects.filter(
                 date=date,
@@ -113,8 +125,6 @@ class BookingForm(forms.ModelForm):
                 raise ValidationError("This time slot is already booked")
 
         return cleaned_data
-
-
 
 # Contact Form 
 class ContactForm(forms.ModelForm):
