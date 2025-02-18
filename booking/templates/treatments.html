@@ -4,14 +4,13 @@
 {% block title %} Treatments - Thai Siam Massage {% endblock %}
 
 {% block content %}
-<!-- Masthead-->
+
 <header class="masthead masthead-banner">
   <div class="container">
     <div class="masthead-heading text-uppercase">Our Treatments</div>
   </div>
 </header>
 
-<!-- Treatments -->
 <section class="page-section" id="treatment">
   <div class="container">
     <div class="row justify-content-center align-items-start mb-5">
@@ -28,7 +27,7 @@
 
     {% if treatments %}
       {% for treatment in treatments %}
-        {% if forloop.counter0|divisibleby:2 %}  {# Start a new row every 2 items #}
+        {% if forloop.counter0|divisibleby:2 %}
           <div class="row mb-5">
         {% endif %}
         
@@ -44,7 +43,7 @@
           </div>
         </div>
 
-        {% if forloop.counter|divisibleby:2 or forloop.last %} {# Close the row after 2 items or if it's the last item #}
+        {% if forloop.counter|divisibleby:2 or forloop.last %}
           </div>
         {% endif %}
       {% endfor %}

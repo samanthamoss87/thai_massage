@@ -8,7 +8,6 @@ import datetime
 from .models import UserProfile, Booking, Contact
 
 
-# User Registration Form
 class UserRegisterForm(UserCreationForm):
     first_name = forms.CharField(max_length=30, required=True)
     last_name = forms.CharField(max_length=30, required=True)
@@ -25,13 +24,11 @@ class UserRegisterForm(UserCreationForm):
 
     def save(self, commit=True):
         user = super().save(commit=False)
-        # Generate username from first name and last name
         base_username = f"{self.cleaned_data['first_name'].lower()}_{self.cleaned_data['last_name'].lower()}"
         username = base_username
-        # Ensure the username is unique
         counter = 1
         while User.objects.filter(username=username).exists():
-            username = f"{base_username}_{uuid.uuid4().hex[:4]}"  # Append a unique identifier
+            username = f"{base_username}_{uuid.uuid4().hex[:4]}"
             counter += 1
         user.username = username
         user.email = self.cleaned_data['email']
@@ -42,19 +39,13 @@ class UserRegisterForm(UserCreationForm):
         return user
 
 
-# User Login Form
+
 class UserLoginForm(AuthenticationForm):
     username = forms.EmailField(
         widget=forms.EmailInput(attrs={'autofocus': True}),
         label="Email Address"
     )
 
-
-# Treatment booking Form
-from django import forms
-from django.core.exceptions import ValidationError
-import datetime
-from .models import Booking
 
 class BookingForm(forms.ModelForm):
     DURATION_CHOICES = [
@@ -76,14 +67,13 @@ class BookingForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        # Generate time slots from 9 AM to 10 PM in 30-minute intervals
         self.fields['start_time'].choices = self.generate_time_slots()
 
     def generate_time_slots(self):
         time_slots = []
-        start_time = datetime.time(9, 0)  # 9:00 AM
-        end_time = datetime.time(22, 0)   # 10:00 PM
-        delta = datetime.timedelta(minutes=30)  # 30-minute intervals
+        start_time = datetime.time(9, 0)
+        end_time = datetime.time(22, 0)
+        delta = datetime.timedelta(minutes=30)
 
         current_time = datetime.datetime.combine(datetime.date.today(), start_time)
         end_datetime = datetime.datetime.combine(datetime.date.today(), end_time)
@@ -101,21 +91,14 @@ class BookingForm(forms.ModelForm):
         duration = int(cleaned_data.get('duration', 0))
 
         if date and start_time and duration:
-            # Convert start_time string to time object
             start_time = datetime.datetime.strptime(start_time, '%H:%M').time()
-
-            # Calculate end time
             start_dt = datetime.datetime.combine(date, start_time)
             end_dt = start_dt + datetime.timedelta(minutes=duration)
-
-            # Get the current date and time
             now = datetime.datetime.now()
 
-            # Check if the selected date and time are in the past
             if start_dt < now:
                 raise ValidationError("You cannot book an appointment in the past.")
 
-            # Check existing bookings
             conflicts = Booking.objects.filter(
                 date=date,
                 start_time__lt=end_dt.time(),
@@ -126,7 +109,7 @@ class BookingForm(forms.ModelForm):
 
         return cleaned_data
 
-# Contact Form 
+
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact

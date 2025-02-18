@@ -22,18 +22,16 @@ class UserProfile(models.Model):
         return self.user.username
 
 
-# Treatment Booking Model
 class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     treatment = models.ForeignKey(Treatments, on_delete=models.CASCADE)
     date = models.DateField()
     start_time = models.TimeField()
     end_time = models.TimeField()
-    duration = models.IntegerField()  # Store the selected duration (30, 60, or 120)
+    duration = models.IntegerField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     def save(self, *args, **kwargs):
-        # Auto-calculate end time based on duration
         from datetime import datetime, timedelta
         start = datetime.combine(self.date, self.start_time)
         self.end_time = (start + timedelta(minutes=self.duration)).time()
@@ -44,7 +42,6 @@ class Booking(models.Model):
 
 
 
-# Contact From Model
 class Contact(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()

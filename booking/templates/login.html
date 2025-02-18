@@ -4,7 +4,7 @@
 {% block title %} Login - Thai Siam Massage {% endblock %}
 
 {% block content %}
-<!-- Masthead-->
+
 <header class="masthead masthead-banner">
   <div class="container">
     <div class="masthead-heading text-uppercase">Login Here</div>
@@ -15,12 +15,13 @@
   <div class="container">
     <div class="row flex justify-content-center align-items-center">
       <div class="col-lg-6 col-sm-12">
-        <!-- Display form errors -->
+        
         {% if form.errors %}
           <div class="alert alert-danger">
             <strong>Error!</strong> Invalid email or password.
           </div>
         {% endif %}
+
         <form method="post" action="{% url 'login' %}">
           {% csrf_token %}
           <div class="form-group">
