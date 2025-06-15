@@ -4,7 +4,7 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-d-4ssstud6o7krn@qiy)^p#@6s@a9xed-wb-3h8)_v5nbf3f!h'
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -110,7 +110,7 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-samanthamos-thaimassage-hqf3rho7qx6.ws-eu117.gitpod.io',]
+CSRF_TRUSTED_ORIGINS = ['https://8000-samanthamos-thaimassage-n7e3bpmscow.ws-eu120.gitpod.io',]
 
 
 SESSION_COOKIE_AGE = 7200
