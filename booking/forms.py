@@ -1,7 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
-from django.utils import timezone
 from django.core.exceptions import ValidationError
 import uuid
 import datetime
@@ -16,7 +15,14 @@ class UserRegisterForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'email', 'mobile', 'password1', 'password2']
+        fields = [
+            'first_name',
+            'last_name',
+            'email',
+            'mobile',
+            'password1',
+            'password2'
+        ]
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -24,7 +30,8 @@ class UserRegisterForm(UserCreationForm):
 
     def save(self, commit=True):
         user = super().save(commit=False)
-        base_username = f"{self.cleaned_data['first_name'].lower()}_{self.cleaned_data['last_name'].lower()}"
+        base_username = f"{self.cleaned_data['first_name'].lower()}\
+            _{self.cleaned_data['last_name'].lower()}"
         username = base_username
         counter = 1
         while User.objects.filter(username=username).exists():
@@ -35,9 +42,11 @@ class UserRegisterForm(UserCreationForm):
         if commit:
             user.save()
             if not hasattr(user, 'userprofile'):
-                UserProfile.objects.create(user=user, mobile=self.cleaned_data['mobile'])
+                UserProfile.objects.create(
+                    user=user,
+                    mobile=self.cleaned_data['mobile']
+                )
         return user
-
 
 
 class UserLoginForm(AuthenticationForm):
@@ -54,15 +63,30 @@ class BookingForm(forms.ModelForm):
         (120, '120 Minutes - $110'),
     ]
 
-    duration = forms.ChoiceField(choices=DURATION_CHOICES, widget=forms.RadioSelect)
-    start_time = forms.ChoiceField(widget=forms.Select(attrs={'class': 'form-control'}))
+    duration = forms.ChoiceField(
+            choices=DURATION_CHOICES,
+            widget=forms.RadioSelect
+        )
+    start_time = forms.ChoiceField(widget=forms.Select(attrs={
+        'class': 'form-control'
+        }))
 
     class Meta:
         model = Booking
-        fields = ['treatment', 'date', 'start_time', 'duration']
+        fields = [
+            'treatment',
+            'date',
+            'start_time',
+            'duration'
+        ]
         widgets = {
-            'date': forms.DateInput(attrs={'type': 'date', 'class': 'form-control'}),
-            'treatment': forms.Select(attrs={"class": 'form-control'})
+            'date': forms.DateInput(attrs={
+                'type': 'date',
+                'class': 'form-control'
+                }),
+            'treatment': forms.Select(attrs={
+                "class": 'form-control'
+            })
         }
 
     def __init__(self, *args, **kwargs):
@@ -75,11 +99,20 @@ class BookingForm(forms.ModelForm):
         end_time = datetime.time(22, 0)
         delta = datetime.timedelta(minutes=30)
 
-        current_time = datetime.datetime.combine(datetime.date.today(), start_time)
-        end_datetime = datetime.datetime.combine(datetime.date.today(), end_time)
+        current_time = datetime.datetime.combine(
+            datetime.date.today(),
+            start_time
+        )
+        end_datetime = datetime.datetime.combine(
+            datetime.date.today(),
+            end_time
+        )
 
         while current_time <= end_datetime:
-            time_slots.append((current_time.time().strftime('%H:%M'), current_time.strftime('%I:%M %p')))
+            time_slots.append((
+                current_time.time().strftime('%H:%M'),
+                current_time.strftime('%I:%M %p')
+            ))
             current_time += delta
 
         return time_slots
@@ -97,7 +130,9 @@ class BookingForm(forms.ModelForm):
             now = datetime.datetime.now()
 
             if start_dt < now:
-                raise ValidationError("You cannot book an appointment in the past.")
+                raise ValidationError(
+                    "You cannot book an appointment in the past."
+                )
 
             conflicts = Booking.objects.filter(
                 date=date,

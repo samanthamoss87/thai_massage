@@ -1,15 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, logout, authenticate
-from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
-from django.core.mail import EmailMessage
-from django.template.loader import render_to_string
-from django.core.mail import send_mail
-from django.conf import settings
 
 from .forms import UserRegisterForm, UserLoginForm, BookingForm, ContactForm
-from .models import Treatments, UserProfile, Booking
+from .models import Treatments, Booking
 
 
 def home(request):
@@ -34,8 +29,9 @@ def book_now(request):
 
     else:
         form = BookingForm()
-    
+
     return render(request, 'booking.html', {'form': form})
+
 
 @login_required
 def edit_booking(request, booking_id):
@@ -44,14 +40,20 @@ def edit_booking(request, booking_id):
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
             form.save()
-            return redirect('dashboard')  # Redirect to the dashboard after saving the changes
+            return redirect('dashboard')
     else:
         form = BookingForm(instance=booking)
 
-    return render(request, 'edit_booking.html', {'form': form, 'booking': booking})
+    return render(
+        request,
+        'edit_booking.html',
+        {'form': form, 'booking': booking}
+    )
+
 
 def booking_success(request):
     return render(request, 'booking_success.html')
+
 
 @login_required
 def cancel_booking(request, booking_id):
@@ -60,11 +62,16 @@ def cancel_booking(request, booking_id):
     if booking.user == request.user:
         booking.delete()
         from django.contrib import messages
-        messages.success(request, 'Your booking has been canceled successfully.')
+        messages.success(
+            request,
+            'Your booking has been canceled successfully.'
+        )
     else:
-        messages.error(request, 'You do not have permission to cancel this booking.')
+        messages.error(
+            request,
+            'You do not have permission to cancel this booking.'
+        )
     return redirect('dashboard')
-
 
 
 def contact(request):
@@ -78,6 +85,7 @@ def contact(request):
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form, 'success': success})
+
 
 def register_view(request):
     if request.method == 'POST':
@@ -109,13 +117,13 @@ def login_view(request):
         form = UserLoginForm()
     return render(request, 'login.html', {'form': form})
 
+
 @login_required
 def dashboard_view(request):
     if not request.user.is_authenticated:
         return redirect('login')
     now = timezone.now().date()
 
-    
     future_bookings = Booking.objects.filter(
         user=request.user,
         date__gte=now
@@ -126,9 +134,11 @@ def dashboard_view(request):
     }
     return render(request, 'dashboard.html', context)
 
+
 def logout_view(request):
     logout(request)
     return redirect('home')
+
 
 def coming_soon(request):
     return render(request, 'coming_soon.html')
