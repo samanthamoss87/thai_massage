@@ -36,6 +36,7 @@
                         <td>{{ booking.end_time|time:"g:i A" }}</td>
                         <td>{{ booking.duration }}</td>
                         <td>
+                            <a href="{% url 'edit_booking' booking.id %}" class="btn btn-warning btn-sm">Edit</a>
                             <a href="{% url 'cancel_booking' booking.id %}" onclick="confirmCancel({{ booking.id }})"
                                 class="btn btn-danger btn-sm">Cancel</a>
                         </td>

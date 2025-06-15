@@ -37,6 +37,18 @@ def book_now(request):
     
     return render(request, 'booking.html', {'form': form})
 
+@login_required
+def edit_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, user=request.user)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('dashboard')  # Redirect to the dashboard after saving the changes
+    else:
+        form = BookingForm(instance=booking)
+
+    return render(request, 'edit_booking.html', {'form': form, 'booking': booking})
 
 def booking_success(request):
     return render(request, 'booking_success.html')

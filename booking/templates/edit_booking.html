@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Edit Booking - Thai Siam Massage {% endblock %}
+
+{% block content %}
+<header class="masthead masthead-banner">
+    <div class="container">
+        <div class="masthead-heading text-uppercase">Edit Booking</div>
+    </div>
+</header>
+
+<section class="page-section">
+    <div class="container">
+        <h2 class="section-heading text-uppercase">Edit your booking</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-primary">Update Booking</button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}
