@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.decorators import login_required
 from django.utils import timezone
+from django.contrib import messages
 
 from .forms import UserRegisterForm, UserLoginForm, BookingForm, ContactForm
 from .models import Treatments, Booking
@@ -61,7 +62,7 @@ def cancel_booking(request, booking_id):
 
     if booking.user == request.user:
         booking.delete()
-        from django.contrib import messages
+
         messages.success(
             request,
             'Your booking has been canceled successfully.'
@@ -81,7 +82,16 @@ def contact(request):
         if form.is_valid():
             form.save()
             success = True
+            messages.success(
+                request,
+                "Thank you for contacting us! We will get back to you soon."
+            )
             return redirect('home')
+        else:
+            messages.error(
+                request,
+                'There was an error with your submission. Please try again.'
+            )
     else:
         form = ContactForm()
     return render(request, 'contact.html', {'form': form, 'success': success})
