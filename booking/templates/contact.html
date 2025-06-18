@@ -38,23 +38,4 @@
         </div>
     </div>
 </section>
-
-{% if messages %}
-    <div class="alert-container">
-        {% for message in messages %}
-            <div class="alert alert-{{ message.tags }} fade-in" id="message-box">
-                <span>{{ message }}</span>
-            </div>
-        {% endfor %}
-    </div>
-
-    <script>
-        setTimeout(function() {
-            const messageBox = document.getElementById('message-box');
-            if (messageBox) {
-                messageBox.style.display = 'none';
-            }
-        }, 3000);
-    </script>
-{% endif %}
 {% endblock %}
