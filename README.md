@@ -9,6 +9,7 @@
     - [Typography](#typography)
     - [Imagery](#imagery)
     - [Programs Used](#programs-used)
+    - [Data Schema](#data-schema)
 3. [Features](#features)
     - [General Features](#general-features)
     - [All pages](#all-pages)
@@ -138,12 +139,24 @@ For Project 4, I developed a booking system for a Thai Massage business, using H
 
 
 ## Programs Used
+These are the programs I used to resize and convert the image to increase the performance of the site for mobile and desktop usage.
+
+
 - [Link to simple imager resizer](https://www.simpleimageresizer.com/)
-
 - [Link to tiny png](https://tinypng.com/)
-
 - [Link to free convert](https://www.freeconvert.com/)
-    - These are the programs I used to resize and convert the image to increase the performance of the site for mobile and desktop usage.
+- [Link to Data Diagram](https://www.quickdatabasediagrams.com/)
+
+## Data Schema
+
+<div align="center"> 
+    <img src="readme-images/data_schema.png" alt="Data Schema">
+</div>
+
+In the application there are 4 major tables which is Treatment, Booking, UserProfile and Contact. 
+
+Contact table is individual. But Treatment is related to the booking table and also there is relation between the booking table and the userprofile so that the user can track their own bookings.
+
 
 
 # Features
@@ -442,7 +455,13 @@ python manage.py runserver
 - I also used https://pagespeed.web.dev/
 - Javascript codes have been validated with https://jshint.com/
 
-### General Testing 
+### General Testing
+
+- To test the views models and forms do the followings
+    - Go to the root of the  project
+    - Run this command `python3 manage.py test`
+
+
 - Each feature was testing when it implemented into the code on both safari and chrome.
 - The site was sent to family and friends to review and get their feedback.
 - Contact us form have validation and will not submit without all information filled in.
