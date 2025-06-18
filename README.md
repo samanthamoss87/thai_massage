@@ -479,7 +479,6 @@ python manage.py runserver
 # Bugs
 ## Known bugs
 - When admin and user login from the same browser, the username from userdashboard vanishes if the superuser doesn't have a name
-- Custom 404 Page is not working properly
 - User doesn't get any email after booking a schedule due to smtp server error
 - Privacy Policy and Terms and conditions page is not working as awaiting content from the client
 - Automated git deployment is not working
